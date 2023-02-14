@@ -18,10 +18,6 @@ final class LoginViewController: UIViewController {
     private let password = "1111"
     
     //MARK: - Override Methods
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.welcomeText = userName
@@ -29,47 +25,47 @@ final class LoginViewController: UIViewController {
     // Метод для скрытия клавиатуры тапом по экрану
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
-        self.view.endEditing(true)
+        view.endEditing(true)
     }
     
     //MARK: - IB Actions
     @IBAction func LoginButtonPressed() {
         if userNameTF.text != userName || passwordTF.text != password {
-            passwordTF.text = ""
             let alertController = UIAlertController(
-                title: "OOPS🫣",
-                message: "The username or password incorrect",
-                preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .default, handler: nil
+                title: "Oops",
+                message: "The username or password is incorrect",
+                preferredStyle: .alert
             )
+            let action = UIAlertAction(title: "OK", style: .default) { _ in
+                self.userNameTF.text = ""
+                self.passwordTF.text = ""
+            }
             alertController.addAction(action)
-            present(alertController, animated: true, completion: nil)
+            present(alertController, animated: true)
         }
     }
-    
     @IBAction func forgotUsernamePressed() {
-        let alertController = UIAlertController(
-            title: "👨‍💻",
-            message: "The username is \(userName)",
-            preferredStyle: .alert
-        )
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(action)
-        present(alertController, animated: true, completion: nil)
+        createAlert(title: "👨‍💻", message: "The username is \(userName)")
     }
     
     @IBAction func forgotPasswordPressed() {
-        let alertController = UIAlertController(
-            title: "🔐",
-            message: "The password is \(password)",
-            preferredStyle: .alert
-        )
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(action)
-        present(alertController, animated: true, completion: nil)
+        createAlert(title: "🔐", message: "The password is \(password)")
     }
     
     @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
+        userNameTF.text = ""
+        passwordTF.text = ""
+    }
+    //MARK: - Private Methods
+    private func createAlert(title: String, message: String) {
+        let alertController = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        let action = UIAlertAction(title: "OK", style: .default)
+        alertController.addAction(action)
+        present(alertController, animated: true)
     }
 }
 
