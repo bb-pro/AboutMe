@@ -19,7 +19,9 @@ final class LoginViewController: UIViewController {
     
     //MARK: - Override Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        guard let welcomeVC = segue.destination as? WelcomeViewController else {
+            return
+        }
         welcomeVC.welcomeText = userName
     }
     // Метод для скрытия клавиатуры тапом по экрану
