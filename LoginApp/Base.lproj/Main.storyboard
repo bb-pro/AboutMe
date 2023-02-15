@@ -36,7 +36,6 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Log in"/>
                                         <connections>
                                             <action selector="LoginButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="del-MW-eT8"/>
-                                            <segue destination="xj9-2b-H1z" kind="presentation" modalPresentationStyle="fullScreen" id="PPw-rp-OCu"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -77,6 +76,7 @@
                     <connections>
                         <outlet property="passwordTF" destination="q9c-Bk-qar" id="TN8-BK-THw"/>
                         <outlet property="userNameTF" destination="NlH-Oa-VKZ" id="0BJ-yw-0cf"/>
+                        <segue destination="xj9-2b-H1z" kind="presentation" identifier="goToWelcome" modalPresentationStyle="fullScreen" id="Lyg-cw-afs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -137,7 +137,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bsn-41-RB5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="nRf-dm-KW5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="757.67441860465112" y="4.5064377682403434"/>
+            <point key="canvasLocation" x="851" y="5"/>
         </scene>
     </scenes>
     <resources>

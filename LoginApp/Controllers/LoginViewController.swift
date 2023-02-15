@@ -45,6 +45,8 @@ final class LoginViewController: UIViewController {
             }
             alertController.addAction(action)
             present(alertController, animated: true)
+        } else {
+            performSegue(withIdentifier: "goToWelcome", sender: nil)
         }
     }
     @IBAction func forgotUsernamePressed() {
@@ -58,6 +60,7 @@ final class LoginViewController: UIViewController {
     @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
         userNameTF.text = ""
         passwordTF.text = ""
+        dismiss(animated: true)
     }
     //MARK: - Private Methods
     private func createAlert(title: String, message: String) {
