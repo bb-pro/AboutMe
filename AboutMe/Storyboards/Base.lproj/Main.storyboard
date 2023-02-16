@@ -12,7 +12,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,7 +86,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="Pu8-JK-idu">
             <objects>
-                <viewController id="xj9-2b-H1z" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xj9-2b-H1z" customClass="WelcomeViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ruy-LZ-fyy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -153,7 +153,7 @@
         <!--About Me-->
         <scene sceneID="P9b-7s-bhR">
             <objects>
-                <viewController id="eVf-Eb-eDq" customClass="ResumeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eVf-Eb-eDq" customClass="ResumeViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s0h-eM-ROM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -282,7 +282,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="About Me" id="obb-St-ihG">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="lKm-MP-yos">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="lKm-MP-yos">
                             <connections>
                                 <segue destination="yyf-6j-aI9" kind="unwind" unwindAction="unwindFor:" id="Vsu-7Q-ZdM"/>
                             </connections>
@@ -295,12 +295,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="siM-na-wWU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="yyf-6j-aI9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3417.2093023255816" y="4.5064377682403434"/>
+            <point key="canvasLocation" x="3251" y="4"/>
         </scene>
         <!--Education-->
         <scene sceneID="859-iV-gly">
             <objects>
-                <viewController id="ZOS-rL-reM" customClass="UniversityViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZOS-rL-reM" customClass="UniversityViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9fU-mL-oWa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -429,7 +429,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Education" id="x9e-7W-RfM">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="EcP-qa-1dc">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="EcP-qa-1dc">
                             <connections>
                                 <segue destination="dnk-SS-ixH" kind="unwind" unwindAction="unwindFor:" id="fq5-ke-FnL"/>
                             </connections>
@@ -442,12 +442,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFz-5U-6e6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="dnk-SS-ixH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5141.8604651162786" y="4.5064377682403434"/>
+            <point key="canvasLocation" x="4959" y="0.0"/>
         </scene>
         <!--Fun Facts-->
         <scene sceneID="Yr9-Pd-aaS">
             <objects>
-                <viewController id="K8l-UT-84Z" customClass="FactsViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="K8l-UT-84Z" customClass="FactsViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5WM-Fe-8u5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -576,7 +576,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Fun Facts" id="qkj-wC-gYT">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="q18-pM-okp">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="q18-pM-okp">
                             <connections>
                                 <segue destination="xpH-nZ-83b" kind="unwind" unwindAction="unwindFor:" id="ckf-ch-Ob7"/>
                             </connections>
@@ -586,7 +586,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jcm-po-oD0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="xpH-nZ-83b" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="6694" y="0.0"/>
+            <point key="canvasLocation" x="6570" y="0.0"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1tb-Mh-7pm">
@@ -645,7 +645,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qdf-iC-fgB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4243.2558139534885" y="4.5064377682403434"/>
+            <point key="canvasLocation" x="4106" y="3"/>
         </scene>
         <!--Fun facts-->
         <scene sceneID="4ky-hr-omv">
@@ -664,7 +664,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbg-Gq-6CQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5933.0232558139533" y="0.64377682403433478"/>
+            <point key="canvasLocation" x="5773" y="0.0"/>
         </scene>
     </scenes>
     <resources>
