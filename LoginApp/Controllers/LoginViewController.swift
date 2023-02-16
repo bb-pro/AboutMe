@@ -33,28 +33,22 @@ final class LoginViewController: UIViewController {
     
     //MARK: - IB Actions
     @IBAction func LoginButtonPressed() {
-        if userNameTF.text != userName || passwordTF.text != password {
-            let alertController = UIAlertController(
-                title: "Oops",
-                message: "The username or password is incorrect",
-                preferredStyle: .alert
+        guard userNameTF.text == userName, passwordTF.text == password else {
+            showAlert(
+                title: "Invalid login or password",
+                message: "Please, enter correct login and password",
+                textField: passwordTF
             )
-            let action = UIAlertAction(title: "OK", style: .default) { _ in
-                self.userNameTF.text = ""
-                self.passwordTF.text = ""
-            }
-            alertController.addAction(action)
-            present(alertController, animated: true)
-        } else {
-            performSegue(withIdentifier: "goToWelcome", sender: nil)
+            return
         }
+        performSegue(withIdentifier: "goToWelcome", sender: nil)
     }
     @IBAction func forgotUsernamePressed() {
-        createAlert(title: "👨‍💻", message: "The username is \(userName)")
+        showAlert(title: "💆🏻‍♂️", message: "The username is \(userName)")
     }
     
     @IBAction func forgotPasswordPressed() {
-        createAlert(title: "🔐", message: "The password is \(password)")
+        showAlert(title: "🔐", message: "The password \(password)")
     }
     
     @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
@@ -63,15 +57,13 @@ final class LoginViewController: UIViewController {
         dismiss(animated: true)
     }
     //MARK: - Private Methods
-    private func createAlert(title: String, message: String) {
-        let alertController = UIAlertController(
-            title: title,
-            message: message,
-            preferredStyle: .alert
-        )
-        let action = UIAlertAction(title: "OK", style: .default)
-        alertController.addAction(action)
-        present(alertController, animated: true)
+    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            textField?.text = ""
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
     
 }
