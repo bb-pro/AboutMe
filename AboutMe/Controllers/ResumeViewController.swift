@@ -10,11 +10,8 @@ import UIKit
 final class ResumeViewController: UIViewController {
 
     @IBOutlet var userImage: UIImageView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         userImage.layer.cornerRadius = userImage.frame.width / 2
-
     }
-
 }
