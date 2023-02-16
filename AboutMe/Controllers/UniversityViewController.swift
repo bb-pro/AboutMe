@@ -9,11 +9,5 @@ import UIKit
 
 final class UniversityViewController: UIViewController {
 
-    @IBOutlet var universityLogo: UIImageView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        universityLogo.layer.cornerRadius = universityLogo.frame.width / 2
-       
-    }
+ 
 }

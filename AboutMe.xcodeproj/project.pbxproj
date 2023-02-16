@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		80B120A0299E12C30030E74D /* UniversityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1209F299E12C30030E74D /* UniversityViewController.swift */; };
-		80B120A2299E1A3D0030E74D /* FactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B120A1299E1A3D0030E74D /* FactsViewController.swift */; };
+		80B120A4299E2F2A0030E74D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B120A3299E2F2A0030E74D /* TabBarViewController.swift */; };
+		80B120A7299E356F0030E74D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B120A6299E356F0030E74D /* User.swift */; };
 		80D8F837299A50A600B325CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D8F836299A50A600B325CB /* AppDelegate.swift */; };
 		80D8F839299A50A600B325CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D8F838299A50A600B325CB /* SceneDelegate.swift */; };
 		80D8F83B299A50A600B325CB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D8F83A299A50A600B325CB /* LoginViewController.swift */; };
@@ -21,7 +22,8 @@
 
 /* Begin PBXFileReference section */
 		80B1209F299E12C30030E74D /* UniversityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityViewController.swift; sourceTree = "<group>"; };
-		80B120A1299E1A3D0030E74D /* FactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsViewController.swift; sourceTree = "<group>"; };
+		80B120A3299E2F2A0030E74D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		80B120A6299E356F0030E74D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		80D8F833299A50A600B325CB /* AboutMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80D8F836299A50A600B325CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80D8F838299A50A600B325CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		80B120A5299E354A0030E74D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				80B120A6299E356F0030E74D /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		80D8F82A299A50A500B325CB = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				80DBA470299DF25E007E19A4 /* App */,
+				80B120A5299E354A0030E74D /* Models */,
 				80D8F84C299A6A1400B325CB /* Controllers */,
 				80DBA46F299DF248007E19A4 /* Storyboards */,
 				80D8F83F299A50A800B325CB /* Assets.xcassets */,
@@ -76,10 +87,10 @@
 			isa = PBXGroup;
 			children = (
 				80D8F83A299A50A600B325CB /* LoginViewController.swift */,
+				80B120A3299E2F2A0030E74D /* TabBarViewController.swift */,
 				80D8F84A299A55DB00B325CB /* WelcomeViewController.swift */,
 				80E56E69299E08AC00A5462F /* ResumeViewController.swift */,
 				80B1209F299E12C30030E74D /* UniversityViewController.swift */,
-				80B120A1299E1A3D0030E74D /* FactsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -174,13 +185,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80B120A4299E2F2A0030E74D /* TabBarViewController.swift in Sources */,
 				80D8F83B299A50A600B325CB /* LoginViewController.swift in Sources */,
 				80D8F84B299A55DB00B325CB /* WelcomeViewController.swift in Sources */,
-				80B120A2299E1A3D0030E74D /* FactsViewController.swift in Sources */,
 				80D8F837299A50A600B325CB /* AppDelegate.swift in Sources */,
 				80E56E6A299E08AC00A5462F /* ResumeViewController.swift in Sources */,
 				80B120A0299E12C30030E74D /* UniversityViewController.swift in Sources */,
 				80D8F839299A50A600B325CB /* SceneDelegate.swift in Sources */,
+				80B120A7299E356F0030E74D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

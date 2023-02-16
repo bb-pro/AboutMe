@@ -15,16 +15,18 @@ final class LoginViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     
     //MARK: - Private Properties
-    private let userName = "User"
-    private let password = "1111"
-    
+    var user = User()
     //MARK: - Override Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else {
-            return
+        if let tabBarVC = segue.destination as? TabBarViewController {
+            if let welcomeVC = tabBarVC.viewControllers?.first as? WelcomeViewController {
+                welcomeVC.welcomeText = user.person.name
+            }
         }
-        welcomeVC.welcomeText = userName
     }
+    
+        
+    
     // Метод для скрытия клавиатуры тапом по экрану
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
@@ -33,7 +35,7 @@ final class LoginViewController: UIViewController {
     
     //MARK: - IB Actions
     @IBAction func LoginButtonPressed() {
-        guard userNameTF.text == userName, passwordTF.text == password else {
+        guard userNameTF.text == user.login, passwordTF.text == user.password else {
             showAlert(
                 title: "Invalid login or password",
                 message: "Please, enter correct login and password",
@@ -44,11 +46,11 @@ final class LoginViewController: UIViewController {
         performSegue(withIdentifier: "goToWelcome", sender: nil)
     }
     @IBAction func forgotUsernamePressed() {
-        showAlert(title: "💆🏻‍♂️", message: "The username is \(userName)")
+        showAlert(title: "💆🏻‍♂️", message: "The username is \(user.login)")
     }
     
     @IBAction func forgotPasswordPressed() {
-        showAlert(title: "🔐", message: "The password \(password)")
+        showAlert(title: "🔐", message: "The password \(user.password)")
     }
     
     @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
