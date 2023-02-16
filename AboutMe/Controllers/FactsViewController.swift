@@ -9,12 +9,4 @@ import UIKit
 
 final class FactsViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-    
-
-  
-
 }
