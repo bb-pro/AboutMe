@@ -48,7 +48,7 @@
 		80D8F82A299A50A500B325CB = {
 			isa = PBXGroup;
 			children = (
-				80D8F835299A50A600B325CB /* LoginApp */,
+				80D8F835299A50A600B325CB /* AboutMe */,
 				80D8F834299A50A600B325CB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,7 +61,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		80D8F835299A50A600B325CB /* LoginApp */ = {
+		80D8F835299A50A600B325CB /* AboutMe */ = {
 			isa = PBXGroup;
 			children = (
 				80DBA470299DF25E007E19A4 /* App */,
@@ -69,7 +69,7 @@
 				80DBA46F299DF248007E19A4 /* Storyboards */,
 				80D8F83F299A50A800B325CB /* Assets.xcassets */,
 			);
-			path = LoginApp;
+			path = AboutMe;
 			sourceTree = "<group>";
 		};
 		80D8F84C299A6A1400B325CB /* Controllers */ = {
@@ -329,7 +329,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7VP863SW97;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LoginApp/App/Info.plist;
+				INFOPLIST_FILE = AboutMe/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -361,7 +361,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7VP863SW97;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LoginApp/App/Info.plist;
+				INFOPLIST_FILE = AboutMe/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
