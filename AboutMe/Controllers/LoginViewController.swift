@@ -15,7 +15,8 @@ final class LoginViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     
     //MARK: - Private Properties
-    var user = User()
+    private var user = User()
+    
     //MARK: - Override Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let tabBarVC = segue.destination as? TabBarViewController {
@@ -24,8 +25,6 @@ final class LoginViewController: UIViewController {
             }
         }
     }
-    
-        
     
     // Метод для скрытия клавиатуры тапом по экрану
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -58,6 +57,7 @@ final class LoginViewController: UIViewController {
         passwordTF.text = ""
         dismiss(animated: true)
     }
+    
     //MARK: - Private Methods
     private func showAlert(title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		80B120A0299E12C30030E74D /* UniversityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B1209F299E12C30030E74D /* UniversityViewController.swift */; };
 		80B120A4299E2F2A0030E74D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B120A3299E2F2A0030E74D /* TabBarViewController.swift */; };
 		80B120A7299E356F0030E74D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B120A6299E356F0030E74D /* User.swift */; };
 		80D8F837299A50A600B325CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D8F836299A50A600B325CB /* AppDelegate.swift */; };
@@ -21,7 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		80B1209F299E12C30030E74D /* UniversityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityViewController.swift; sourceTree = "<group>"; };
 		80B120A3299E2F2A0030E74D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		80B120A6299E356F0030E74D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		80D8F833299A50A600B325CB /* AboutMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,7 +88,6 @@
 				80B120A3299E2F2A0030E74D /* TabBarViewController.swift */,
 				80D8F84A299A55DB00B325CB /* WelcomeViewController.swift */,
 				80E56E69299E08AC00A5462F /* ResumeViewController.swift */,
-				80B1209F299E12C30030E74D /* UniversityViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -190,7 +187,6 @@
 				80D8F84B299A55DB00B325CB /* WelcomeViewController.swift in Sources */,
 				80D8F837299A50A600B325CB /* AppDelegate.swift in Sources */,
 				80E56E6A299E08AC00A5462F /* ResumeViewController.swift in Sources */,
-				80B120A0299E12C30030E74D /* UniversityViewController.swift in Sources */,
 				80D8F839299A50A600B325CB /* SceneDelegate.swift in Sources */,
 				80B120A7299E356F0030E74D /* User.swift in Sources */,
 			);
