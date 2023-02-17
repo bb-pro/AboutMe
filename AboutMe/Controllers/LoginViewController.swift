@@ -21,7 +21,7 @@ final class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let tabBarVC = segue.destination as? TabBarViewController {
             if let welcomeVC = tabBarVC.viewControllers?.first as? WelcomeViewController {
-                welcomeVC.welcomeText = user.person.name
+                welcomeVC.welcomeText = User.getPersonData().name
             }
         }
     }
