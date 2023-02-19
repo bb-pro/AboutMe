@@ -22,8 +22,10 @@ final class ResumeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //didSet{  }
         userImage.layer.cornerRadius = userImage.frame.width / 2
+        
+    
         nameLabel.text = person.name
         ageLabel.text = person.age
         countryLabel.text = person.country
