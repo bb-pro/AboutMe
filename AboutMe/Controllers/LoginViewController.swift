@@ -15,16 +15,24 @@ final class LoginViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     
     //MARK: - Private Properties
-    private var user = User()
+    private let user = User(login: "User", password: "1111", person: Person.getPersonData())
     
     //MARK: - Override Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let tabBarVC = segue.destination as? TabBarViewController {
-            if let welcomeVC = tabBarVC.viewControllers?.first as? WelcomeViewController {
-                welcomeVC.welcomeText = User.getPersonData().name
+        guard let tabBarVC = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarVC.viewControllers else { return }
+        
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.welcomeText = user.person.name
+            } else if let resumeVC = viewController as? ResumeViewController {
+                resumeVC.person = user.person
+            } else if let educationVC = viewController as? EducationViewController {
+                educationVC.education = user.person.userEducation
             }
         }
     }
+    
     
     // Метод для скрытия клавиатуры тапом по экрану
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

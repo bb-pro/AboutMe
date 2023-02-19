@@ -7,26 +7,9 @@
 
 
 struct User {
-    let login = "User"
-    let password = "1111"
-    let person: Person? = nil
-    
-    let userEducation: Education? = nil
-    
-    static func getPersonData() -> Person {
-        return Person(
-            name: "Bektemur", age: "21",
-            country: "Uzbekistan", city: "Namangan",
-            education: "Bachelor's 2nd year", hobby: "Programming"
-        )
-    }
-    static func getEducationData() -> Education {
-        return Education(
-            university: "Yamanashi Gakuin", country: "Japan",
-            faculty: "iCLA", major: "Data Science",
-            level: "2", gpa: "3.8/4")
-    }
-    
+    let login: String
+    let password: String
+    let person: Person
 }
 
 struct Person {
@@ -36,6 +19,19 @@ struct Person {
     let city: String
     let education: String
     let hobby: String
+    let userEducation: Education
+    
+    static func getPersonData() -> Person {
+        return Person(
+            name: "Bektemur",
+            age: "21",
+            country: "Uzbekistan",
+            city: "Namangan",
+            education: "Bachelor's 2nd year",
+            hobby: "Programming",
+            userEducation: Education.getUserEducation()
+        )
+    }
 }
 
 struct Education {
@@ -45,5 +41,16 @@ struct Education {
     let major: String
     let level: String
     let gpa: String
+    
+    static func getUserEducation() -> Education {
+        return Education(
+            university: "Yamanashi Gakuin",
+            country: "Japan",
+            faculty: "iCLA",
+            major: "Data Science",
+            level: "2nd year",
+            gpa: "3.8/4"
+        )
+    }
 }
 

@@ -10,6 +10,9 @@ import UIKit
 final class ResumeViewController: UIViewController {
 
     @IBOutlet var userImage: UIImageView!
+    
+    var person: Person!
+    
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var ageLabel: UILabel!
     @IBOutlet var countryLabel: UILabel!
@@ -21,12 +24,11 @@ final class ResumeViewController: UIViewController {
         super.viewDidLoad()
         
         userImage.layer.cornerRadius = userImage.frame.width / 2
-        
-        nameLabel.text = User.getPersonData().name
-        ageLabel.text = User.getPersonData().age
-        countryLabel.text = User.getPersonData().country
-        cityLabel.text = User.getPersonData().city
-        educationLabel.text = User.getPersonData().education
-        hobbyLabel.text = User.getPersonData().hobby
+        nameLabel.text = person.name
+        ageLabel.text = person.age
+        countryLabel.text = person.country
+        cityLabel.text = person.city
+        educationLabel.text = person.education
+        hobbyLabel.text = person.hobby
     }
 }

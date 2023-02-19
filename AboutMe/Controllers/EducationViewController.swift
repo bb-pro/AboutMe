@@ -9,7 +9,7 @@ import UIKit
 
 class EducationViewController: UIViewController {
 
-    
+    var education: Education!
     @IBOutlet var universityName: UILabel!
     @IBOutlet var countryLabel: UILabel!
     @IBOutlet var facultyLabel: UILabel!
@@ -20,11 +20,11 @@ class EducationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        universityName.text = User.getEducationData().university
-        countryLabel.text = User.getEducationData().country
-        facultyLabel.text = User.getEducationData().faculty
-        majorLabel.text = User.getEducationData().major
-        levelLabel.text = User.getEducationData().level
-        gpaLabel.text = User.getEducationData().gpa
+        universityName.text = education.university
+        countryLabel.text = education.country
+        facultyLabel.text = education.faculty
+        majorLabel.text = education.major
+        levelLabel.text = education.level
+        gpaLabel.text = education.gpa
     }
 }
