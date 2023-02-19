@@ -76,14 +76,14 @@
 			children = (
 				80DBA470299DF25E007E19A4 /* App */,
 				80B120A5299E354A0030E74D /* Models */,
-				80D8F84C299A6A1400B325CB /* Controllers */,
+				80D8F84C299A6A1400B325CB /* ViewControllers */,
 				80DBA46F299DF248007E19A4 /* Storyboards */,
 				80D8F83F299A50A800B325CB /* Assets.xcassets */,
 			);
 			path = AboutMe;
 			sourceTree = "<group>";
 		};
-		80D8F84C299A6A1400B325CB /* Controllers */ = {
+		80D8F84C299A6A1400B325CB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				80D8F83A299A50A600B325CB /* LoginViewController.swift */,
@@ -92,7 +92,7 @@
 				80E56E69299E08AC00A5462F /* ResumeViewController.swift */,
 				806270EC299F611C0039D814 /* EducationViewController.swift */,
 			);
-			path = Controllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		80DBA46F299DF248007E19A4 /* Storyboards */ = {
